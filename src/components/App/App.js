@@ -1,6 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
 import Instructions from '../Instructions/Instructions.js';
+import data from '../App/data';
+import AnimalCard from '../AnimalCard/AnimalCard';
+
 
 function displayEmojiName(event){
   alert(event.target.id);
@@ -21,15 +24,27 @@ const emojis = [
   }
 ];
 
+
+function showAdditional(additional) {
+  const alertInformation = Object.entries(additional)
+    .map(information => `${information[0]}: ${information[1]}`)
+    .join('\n');
+  alert(alertInformation)
+};
+
+
 function App() {
   const greeting = 'greeting';
   const displayAction =  false //"You see me if Truthy and don't if value is falsy"
  
   return (
     <div className="container">
+
      <h1 id={greeting}>Hello react</h1>
     {displayAction && <p>You see me now</p>}
+
     <Instructions />
+
      <ul>
        {
           emojis.map(emoji=>(
@@ -41,9 +56,34 @@ function App() {
           ))
        }
      </ul>
-    </div>
+
+      <div className="wrapper">
+        <h1>Animals</h1>
+                {
+                  data.map(animal => (
+                    <AnimalCard 
+                        additional={animal.additional}
+                        diet={animal.diet}
+                        key={animal.name}
+                        name={animal.name}
+                        scientificName= {animal.scientificName}
+                        size={animal.size}
+                        showAdditional={showAdditional}
+                    />
+                  ))
+                  
+                }
+      </div>
+
+              
+
+     </div>
+
   );
+  
 }
+
+
 
 export default App;
 
