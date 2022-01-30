@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import Instructions from '../Instructions/Instructions.js';
 
 function displayEmojiName(event){
   alert(event.target.id);
@@ -27,8 +28,8 @@ function App() {
   return (
     <div className="container">
      <h1 id={greeting}>Hello react</h1>
-    {!displayAction && <p>You see me now</p>}
-  
+    {displayAction && <p>You see me now</p>}
+    <Instructions />
      <ul>
        {
           emojis.map(emoji=>(

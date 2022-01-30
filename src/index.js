@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 /*
   This code instructs React to find an element with an id of root and inject the React code there. <App/> is your root element, and everything will branch from there. This is the beginning point for all future React code
