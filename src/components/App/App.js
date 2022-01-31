@@ -3,6 +3,7 @@ import './App.css';
 import Instructions from '../Instructions/Instructions.js';
 import data from '../App/data';
 import AnimalCard from '../AnimalCard/AnimalCard';
+import Alert from '../Alert/Alert';
 
 
 function displayEmojiName(event){
@@ -74,6 +75,10 @@ function App() {
                   ))
                   
                 }
+
+        <Alert title="Items Not Added" type="error">
+        <div>Your items are out of stock.</div>
+      </Alert>
       </div>
 
               

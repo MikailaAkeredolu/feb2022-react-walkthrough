@@ -33,7 +33,7 @@ export default function AnimalDetails({ dietDetails, scientificName, dummyDetail
       <div>
         Diet: {dietDetails.map(food => convertFood(food)).join(' ')}
       </div>
-      <h4>dummyDetails: {dummyDetails}</h4>
+      <h4>dDetails: {dummyDetails}</h4>
     </div>
   )
 }
