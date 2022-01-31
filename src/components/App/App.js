@@ -4,6 +4,7 @@ import Instructions from '../Instructions/Instructions.js';
 import data from '../App/data';
 import AnimalCard from '../AnimalCard/AnimalCard';
 import Alert from '../Alert/Alert';
+import Product from '../Product/Product';
 
 
 function displayEmojiName(event){
@@ -41,6 +42,8 @@ function App() {
   return (
     <div className="container">
 
+<Product />
+
      <h1 id={greeting}>Hello react</h1>
     {displayAction && <p>You see me now</p>}
 
@@ -58,7 +61,7 @@ function App() {
        }
      </ul>
 
-      <div className="wrapper">
+      <div className="Appwrapper">
         <h1>Animals</h1>
                 {
                   data.map(animal => (
@@ -81,7 +84,7 @@ function App() {
       </Alert>
       </div>
 
-              
+            
 
      </div>
 
