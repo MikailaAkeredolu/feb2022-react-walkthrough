@@ -1,20 +1,33 @@
 import React from 'react';
 import './AnimalCard.css'
 import PropTypes from 'prop-types';
+import AnimalDetails from '../AnimalDetails/AnimalDetails';
+import Card from '../Card/Card';
 
+//Wrapper Component
+/*
+    you’ll have a parent component that can provide props to nested components without having to know what the props are. This will keep the parent component flexible, allowing you to update the child component without having to change the parent.
+*/
 
 export default function AnimalCard(props) {
 
+    //destructure props
     const {additional,showAdditional, name, scientificName, size, diet } = props;  //Properties for this class
 
   return (
-    <div className="animal-wrapper">
-        <h2>{name}</h2>
-        <h3>{scientificName}</h3>
-        <h4>{size}kg</h4>
-        <div>{diet.join(', ')}.</div>
-        <button type="button" onClick={() => showAdditional(additional)}>More Info</button>
-  </div>
+
+          <Card title="Animal" details={<em>Mammal</em>}>
+                <h2>{name}</h2>
+                <h4>{size}kg</h4>
+                
+                <AnimalDetails
+                    dietDetails={diet}
+                    scientificName={scientificName}
+                />
+
+                <button type="button" onClick={() => showAdditional(additional)}>More Info</button>
+          </Card>
+  
   )
 }
 
