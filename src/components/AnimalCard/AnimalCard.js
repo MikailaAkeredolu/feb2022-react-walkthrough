@@ -12,19 +12,21 @@ import Card from '../Card/Card';
 export default function AnimalCard(props) {
 
     //destructure props
-    const {additional,showAdditional, name, scientificName, size, diet } = props;  //Properties for this class
+    const {additional,showAdditional, name, scientificName, size, diet, dummy } = props;  //Properties for this class
 
   return (
 
           <Card title="Animal" details={<em>Mammal</em>}>
                 <h2>{name}</h2>
+                {/* <h2>{props.name}</h2> */}
                 <h4>{size}kg</h4>
-                
+                <h6>{dummy}</h6>
                 <AnimalDetails
                     dietDetails={diet}
                     scientificName={scientificName}
+                    dummyDetails = {dummy}
                 />
-
+                
                 <button type="button" onClick={() => showAdditional(additional)}>More Info</button>
           </Card>
   

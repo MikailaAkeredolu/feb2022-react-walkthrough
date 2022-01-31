@@ -23,7 +23,7 @@ function convertFood(food) {
 
 //loop over the diet and convert the string to an emoji using the switch statement.
 
-export default function AnimalDetails({ dietDetails, scientificName }) {
+export default function AnimalDetails({ dietDetails, scientificName, dummyDetails }) {
   return(
     <div className="details">
       <h4>Details:</h4>
@@ -33,6 +33,7 @@ export default function AnimalDetails({ dietDetails, scientificName }) {
       <div>
         Diet: {dietDetails.map(food => convertFood(food)).join(' ')}
       </div>
+      <h4>dummyDetails: {dummyDetails}</h4>
     </div>
   )
 }

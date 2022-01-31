@@ -69,6 +69,7 @@ function App() {
                         scientificName= {animal.scientificName}
                         size={animal.size}
                         showAdditional={showAdditional}
+                        dummy="test"
                     />
                   ))
                   
@@ -89,6 +90,11 @@ export default App;
 
 
 /*
+Props: passing props from Parent (App) to child component (AnimalCard)
+Animal card has props parameter
+Props/erties defined in in parent are values to child
+
+
 Each span has the role attribute set to the img role. 
 This will signal to accessibility software that the element is acting like an image.
 
