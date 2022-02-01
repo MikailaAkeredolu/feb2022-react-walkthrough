@@ -5,6 +5,7 @@ import data from '../App/data';
 import AnimalCard from '../AnimalCard/AnimalCard';
 import Alert from '../Alert/Alert';
 import Product from '../Product/Product';
+import Pizza from '../Pizza/Pizza';
 
 
 function displayEmojiName(event){
@@ -41,8 +42,8 @@ function App() {
  
   return (
     <div className="container">
-
-<Product />
+<Pizza />
+{/* <Product /> */}
 
      <h1 id={greeting}>Hello react</h1>
     {displayAction && <p>You see me now</p>}
@@ -83,8 +84,6 @@ function App() {
         <div>Your items are out of stock.</div>
       </Alert>
       </div>
-
-            
 
      </div>
 
